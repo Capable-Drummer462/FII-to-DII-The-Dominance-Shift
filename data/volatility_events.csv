@@ -1,0 +1,6 @@
+Year,Context/Event,Market_Movement%,recovery_month,FII_crore,DII_crore,FII_behavior,DII_behavior
+1992,Mehta Scam,-48.03,29,13.4,13017.8,Negligible,Inflow
+2008,Global crisis,-37.95,34,-47706,60040.47,Exodus,Inflow
+2013,Taper Tantrum,18.85,4,79709,-28060,Inflow,Exodus
+2019,COVID,-23.8,10,6152.26,129300,Inflow,Exodus
+2022,Russia-Ukraine,0.72,14,-37362,255500,Exodus,Inflow
