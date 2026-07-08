@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FII to DII: The Dominance Shift
 ### India Capital Markets Analysis — FY 1992-93 to FY 2024-25
 
@@ -132,3 +133,6 @@ This is not a trading strategy, a stock recommendation, or a prediction model. I
 
 *[Your Name] | Data Analysis Project | Python · pandas · Streamlit*
 *Data collected and verified: 2025 | Fiscal year basis throughout*
+=======
+# FII-to-DII-The-Dominance-Shift
+>>>>>>> a3929df656616b1eb0e126be35468a766ec48be4
