@@ -132,7 +132,7 @@ This is not a trading strategy, a stock recommendation, or a prediction model. I
 
 ---
 
-*Gopal Vashistha | Data Analysis Project | Python  pandas Streamlit Matplotlib Plotly*
- *| Fiscal year basis throughout*
+***Gopal Vashistha | Data Analysis Project | Python  pandas Streamlit Matplotlib Plotly***
+ ****| Fiscal year basis throughout****
 =======
-# FII-to-DII-The-Dominance-Shift
+
