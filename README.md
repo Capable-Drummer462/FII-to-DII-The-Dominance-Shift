@@ -130,7 +130,7 @@ plotly>=5.0
 
 ---
 
-## What This Project Is Not
+### What This Project Is Not
 
 This is not a trading strategy, a stock recommendation, or a prediction model. It is a historical structural analysis of capital flow patterns in Indian equity markets. The data reflects publicly available information from regulatory and institutional sources.
 
