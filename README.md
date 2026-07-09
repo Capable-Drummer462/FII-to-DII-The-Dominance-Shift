@@ -121,6 +121,7 @@ matplotlib>=3.7
 streamlit>=1.30
 jupyter>=1.0
 notebook>=7.0
+plotly>=5.0
 ```
 
 ---
