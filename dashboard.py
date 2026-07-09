@@ -228,8 +228,8 @@ st.markdown("""
     <div class="hero-eyebrow">India Capital Markets · 1992 – 2025</div>
     <div class="hero-title">FII to DII:<br>The Dominance Shift</div>
     <div class="hero-thesis">
-        How three decades of foreign capital dependence gave way to domestic financial muscle —
-        and why Indian markets no longer panic when foreign investors leave.
+        How three decades of Foreign Capital dependence gave way to Domestic financial muscle-
+        Why Indian markets no longer panic when foreign investors leave.
     </div>
     <div class="hero-divider"></div>
 </div>
@@ -248,15 +248,15 @@ folio_2025 = dii['mf_folios_Lakh'].iloc[-1]
 with k1:
     st.markdown(f"""
     <div class="kpi-card">
-        <div class="kpi-label">FII Net Flow — FY 2024-25</div>
+        <div class="kpi-label">FII Net Flow — FY 2025-26</div>
         <div class="kpi-value">₹{abs(fii_2025/100000):.2f}L Cr</div>
-        <div class="kpi-sub">↓ Net outflow — foreign capital retreating</div>
+        <div class="kpi-sub">↓ Net outflow — foreign capital retreat</div>
     </div>""", unsafe_allow_html=True)
 
 with k2:
     st.markdown(f"""
     <div class="kpi-card">
-        <div class="kpi-label">DII Net Flow — FY 2024-25</div>
+        <div class="kpi-label">DII Net Flow — FY 2025-26</div>
         <div class="kpi-value">₹{dii_2025/100000:.2f}L Cr</div>
         <div class="kpi-sub">↑ Domestic capital at all-time high</div>
     </div>""", unsafe_allow_html=True)
@@ -283,15 +283,15 @@ st.markdown('<hr class="divider">', unsafe_allow_html=True)
 st.markdown("""
 <div class="section-label">Section 01</div>
 <div class="section-title">The Events That Shaped the Shift</div>
-<div class="section-sub">Five market moments that defined India's journey from FII dependence to DII dominance</div>
+<div class="section-sub">Five major market events that defined India's journey from FII dependence to DII dominance</div>
 """, unsafe_allow_html=True)
 
 events = [
-    ("FY 1992-93", "Mehta Scam", "India's first major market scandal. FII had just been permitted entry — presence negligible at ₹13 crore. DII and retail investors bore the entire brunt of a -48% crash. The market had no foreign safety net, and no domestic institutional muscle either."),
-    ("FY 2008-09", "Global Crisis", "FII fled with -₹47,706 crore as Lehman collapsed. For the first time, DII absorbed the selling — ₹60,040 crore in net buying. The market still fell -38%, but DII had shown it could step up. The first proof of concept."),
-    ("FY 2013-14", "Taper Tantrum", "US Fed signalled tapering of QE. FII actually net bought ₹79,709 crore but DII exited -₹28,060 crore — still not yet reliable as a stabilizer. The domestic ecosystem was building but not yet mature."),
-    ("FY 2019-20", "COVID-19 Crash", "FII modest inflow of ₹6,152 crore but DII deployed a staggering ₹1,29,300 crore. Market fell -23.8% but recovered in just 10 months. DII had become a genuine counterweight to market panic for the first time."),
-    ("FY 2022-23", "Russia-Ukraine & Rate Hikes", "FII sold -₹37,632 crore as global uncertainty spiked. DII absorbed ₹2,55,500 crore without blinking. Market barely moved — only +0.72%. The thesis was complete. DII had structurally replaced FII as the market's anchor."),
+    ("FY 1992-93", "Mehta Scam", "India's first market scandal. FII had just been permitted entry (Liberalisation) — initially negligible at ₹13 crore. The market had no foreign safety net, and no domestic institutional muscle either. That led to a fiasco directly in New Delhi"),
+    ("FY 2008-09", "Global Crisis", "FII fled with ₹47,706 crore as Lehman brothers collapsed. For the first time, DII absorbed the selling, i.e., ₹60,040 crore in net buying. The market still fell 38%, but DII had shown it could step up. The first proof of cushion concept."),
+    ("FY 2013-14", "Taper Tantrum", "US Federal Reserve signalled tapering of Quantitative Easing. FII actually net bought ₹79,709 crore but DII exited with ₹28,060 crore — still not reliable as a stabilizer. The domestic ecosystem was in developing phase but not yet mature."),
+    ("FY 2019-20", "COVID-19 Crash", "FII modest inflow of ₹6,152 crore, DII deployed a massive ₹1,29,300 crore. Market fell 23.8% but recovered in just 10 months. DII had become a genuine counterweight to market panic for the first time."),
+    ("FY 2022-23", "Russia-Ukraine & Rate Hikes", "FII sold ₹37,632 crore as global uncertainty spiked. DII absorbed ₹2,55,500 crore without blinking. Market barely moved — only +0.72%. The thesis was complete. <strong> DII had structurally replaced FII as the market's anchor."),
 ]
 
 col_a, col_b = st.columns([1, 1])
@@ -329,18 +329,18 @@ fig_flow = go.Figure()
 # FII fill above/below zero
 fig_flow.add_trace(go.Scatter(
     x=years, y=fii_vals, fill='tozeroy',
-    fillcolor='rgba(74,127,165,0.15)', line=dict(color=BLUE, width=2.5),
-    mode='lines+markers', marker=dict(size=7, color=BLUE, symbol='circle'),
-    name='FII Net Flow', hovertemplate='%{customdata}<extra></extra>',
+    fillcolor='rgba(74,127,165,0.15)', line=dict(color=AMBER, width=2.5),
+    mode='lines+markers', marker=dict(size=7, color=AMBER, symbol='circle'),
+    name='FII Flow', hovertemplate='%{customdata}<extra></extra>',
     customdata=hover_fii
 ))
 
 # DII fill above/below zero
 fig_flow.add_trace(go.Scatter(
     x=years, y=dii_flow, fill='tozeroy',
-    fillcolor='rgba(196,147,63,0.12)', line=dict(color=AMBER, width=2.5),
-    mode='lines+markers', marker=dict(size=7, color=AMBER, symbol='circle'),
-    name='DII Net Flow', hovertemplate='%{customdata}<extra></extra>',
+    fillcolor='rgba(196,147,63,0.12)', line=dict(color=BLUE, width=2.5),
+    mode='lines+markers', marker=dict(size=7, color=BLUE, symbol='circle'),
+    name='DII Flow', hovertemplate='%{customdata}<extra></extra>',
     customdata=hover_dii
 ))
 
@@ -359,7 +359,7 @@ for _, cr in crises.iterrows():
 fig_flow.update_layout(
     paper_bgcolor=CARD_BG, plot_bgcolor=CARD_BG,
     font=dict(color=TEXT, family='Inter, DejaVu Sans'),
-    title=dict(text='FII vs DII Net Investment Flows — The Divergence (FY 1992-93 to FY 2024-25)',
+    title=dict(text='FII vs DII Net Investment Flows — The Divergence (FY 1992-93 to FY 2025-26)',
                font=dict(size=14, color=TEXT), x=0.01),
     xaxis=dict(gridcolor=GRID, color=MUTED, title='Fiscal Year'),
     yaxis=dict(gridcolor=GRID, color=MUTED, title='Net Flow (₹ Crore)',
@@ -375,10 +375,10 @@ st.plotly_chart(fig_flow, use_container_width=True)
 
 st.markdown("""
 <div class="insight-box">
-    <strong style="color:#C4933F">What this chart tells you:</strong> Until 2019, FII and DII flows were roughly comparable in scale.
-    From 2020 onwards, DII flows began dwarfing FII — not because FII got smaller, but because domestic capital
-    grew so large it simply overwhelmed foreign flows. By FY 2024-25, DII deployed ₹8,49,000 crore against FII's
-    -₹2,26,000 crore outflow. The gap is no longer cyclical — it is structural.
+    <strong style="color:#C4933F">What this chart tells you: </strong> Until 2019, FII and DII flows were comparable in scale.
+     2020 onwards, DII flows began dwarfing FII — not because FII got smaller, but because domestic capital
+    grew so large it simply overtook foreign flows. By FY 2025-26, DII deployed ₹8,49,000 crore against FII's
+    ₹2,26,000 crore outflow. The gap is no longer cyclical — it is structural.
 </div>
 """, unsafe_allow_html=True)
 
@@ -388,15 +388,15 @@ st.markdown('<hr class="divider">', unsafe_allow_html=True)
 st.markdown("""
 <div class="section-label">Section 03</div>
 <div class="section-title">Crisis Behaviour — How Each Side Responded</div>
-<div class="section-sub">FII and DII conduct during India's five defining market shocks</div>
+<div class="section-sub">FII and DII conduct during India's defining market shocks</div>
 """, unsafe_allow_html=True)
 
 col_a, col_b = st.columns(2)
 
 with col_a:
     crisis_labels = [f"{r['Year']}<br>{r['Context/Event']}" for _, r in crises.iterrows()]
-    fii_c_colors = [BLUE if v >= 0 else '#A54A4A' for v in crises['FII_crore']]
-    dii_c_colors = [AMBER if v >= 0 else '#7A5A2A' for v in crises['DII_crore']]
+    fii_c_colors = [AMBER if v >= 0 else '#A54A4A' for v in crises['FII_crore']]
+    dii_c_colors = [BLUE if v >= 0 else '#7A5A2A' for v in crises['DII_crore']]
 
     fig_crisis = go.Figure()
     fig_crisis.add_trace(go.Bar(
@@ -460,9 +460,9 @@ st.dataframe(crisis_display, use_container_width=True)
 
 st.markdown("""
 <div class="insight-box">
-    <strong style="color:#C4933F">The pattern:</strong> In 1992, there was no DII response — the institution barely existed.
+    <strong style="color:#C4933F">The pattern:</strong> In 1992, there was no DII response — the institution barely existed, even in our project we had to use REIs as DII proxy.
     By 2008, DII absorbed FII selling for the first time. By 2022, DII absorbed 6.8x more than FII sold.
-    Each crisis reveals a more confident, larger, and more structurally embedded domestic investor base.
+    Each crisis reveals a more confident, larger and more structurally embedded domestic investor base.
     The 2022 Russia-Ukraine event is the clearest proof — FII sold ₹37,632 crore, market moved only +0.72%.
     DII had become the floor.
 </div>
@@ -473,8 +473,8 @@ st.markdown('<hr class="divider">', unsafe_allow_html=True)
 # ── SECTION 4: DII STRENGTH ───────────────────────────────────
 st.markdown("""
 <div class="section-label">Section 04</div>
-<div class="section-title">Where the Domestic Muscle Came From</div>
-<div class="section-sub">The structural forces behind DII's rise — mutual funds, retail investors, and institutional capital</div>
+<div class="section-title">Where the Domestic Muscle Came From?</div>
+<div class="section-sub">The structural constraints behind DII's rise — mutual funds, retail investors, and institutional capital</div>
 """, unsafe_allow_html=True)
 
 col_a, col_b = st.columns(2)
@@ -527,12 +527,12 @@ with col_b:
 
 st.markdown("""
 <div class="insight-box">
-    <strong style="color:#C4933F">The structural story:</strong> DII dominance wasn't an accident or a policy decision — it was
+    <strong style="color:#C4933F">The structural story:</strong> DII dominance wasn't an accident or a policy decision, it was
     the compounding effect of millions of Indians starting SIPs, EPFO channelling provident fund money into
-    equity ETFs post-2015, and LIC deploying insurance premiums into markets. The folio count chart tells
-    the retail story — a dip after the 2008 crash (retail investors burned and exiting), then an explosion
+    equity ETFs post-2015, and LIC pumping insurance premiums into markets. The folio count chart tells
+    the retail story — a dip after the 2008 crash (retail investors burned and exit), then an explosion
     from 2015 onwards as the SIP culture took root. By 2025, 2,739 lakh folios means roughly every second
-    Indian household has some exposure to equity markets. That is an irreversible structural shift.
+    Indian household has some exposure to equity markets. That was an irreversible structural shift.
 </div>
 """, unsafe_allow_html=True)
 
@@ -586,7 +586,7 @@ fig_sensex.update_layout(
     paper_bgcolor=CARD_BG, plot_bgcolor=CARD_BG,
     font=dict(color=TEXT, family='Inter, DejaVu Sans'),
     title=dict(
-        text='Sensex Journey — FY 1992-93 to FY 2024-25 (Hover for FII/DII context)',
+        text='Sensex Journey — FY 1992-93 to FY 2025-26 (Hover for FII/DII context)',
         font=dict(size=14, color=TEXT), x=0.01
     ),
     xaxis=dict(gridcolor=GRID, color=MUTED, title='Fiscal Year', dtick=3),
@@ -611,33 +611,33 @@ st.markdown("""
 
 terms = [
     ("FII — Foreign Institutional Investor",
-     "Foreign entities — hedge funds, sovereign wealth funds, pension funds — that invest in Indian equity and debt markets. Their flows are large, fast-moving, and highly sensitive to global macro conditions like US interest rates, dollar strength, and geopolitical risk. When global risk appetite drops, FII is typically the first to exit emerging markets like India."),
+     "Foreign entities — (hedge funds, sovereign wealth funds, pension funds); that invest in Indian equity and debt markets. Their flows are large, fast-moving, and highly sensitive to global macro conditions like US interest rates, dollar strength, and geopolitical risk. When global risk appetite drops, FII is typically the first to exit emerging markets like India."),
     ("DII — Domestic Institutional Investor",
      "Indian institutions deploying capital into markets — primarily mutual funds, insurance companies (LIC, HDFC Life), and EPFO. Unlike FII, DII capital is patient, long-term, and largely insulated from global panic. SIP mandates mean DII receives fresh inflows every month regardless of market conditions, making it a structural buyer."),
     ("REI — Retail Equity Investment",
-     "Direct equity investment by individual retail investors — not routed through institutions. In the 1990s, before mutual funds and EPFO equity exposure became significant, REI was the primary domestic capital pool in Indian markets. Used in this analysis as a proxy for DII in the early years (FY 1992-93 to FY 1998-99) since no standardised DII tracking agency existed during this period."),
+     "Direct equity investment by individual retail investors (First-Generation IPO Hunters, Mutual Fund Aggregators ) — not routed through institutions. In the 1990s, before mutual funds and EPFO equity exposure became significant, REI was the primary domestic capital pool in Indian markets. Used in this analysis as a proxy for DII in the early years (FY 1992-93 crisis and FY 1998-99 crisis) since no standardised DII tracking agency existed during this period."),
     ("SEBI — Securities and Exchange Board of India",
-     "India's primary capital markets regulator, established in 1992. SEBI governs all market participants — FIIs, DIIs, brokers, exchanges, and listed companies. SEBI's formalisation of FII registration in 1992 and subsequent DII reporting frameworks over the 2000s are what eventually made this analysis possible. Pre-SEBI formalisation, institutional flow data is sparse and inconsistent."),
+     "India's primary capital market regulator, established in 1992. SEBI governs all market participants — FIIs, DIIs, brokers, exchanges, and listed companies. SEBI's formalisation of FII registration in 1992 and subsequent DII reporting frameworks over the 2000s are what eventually made this analysis possible. Pre-SEBI formalisation, institutional flow data is very sparse and inconsistent."),
     ("AMFI — Association of Mutual Funds in India",
-     "The self-regulatory body for India's mutual fund industry, established in 1995. AMFI publishes monthly AUM figures, SIP inflow data, and folio counts — the primary source for DII composition data in this analysis. Reliable AMFI data begins from around 2000; earlier figures are estimates from industry reports."),
+     "The self regulatory body for Indian mutual fund industry, established in 1995. AMFI publishes monthly AUM figures, SIP inflow data, and folio counts — the primary source for DII composition data in this analysis. Reliable AMFI data begins from around 2000; earlier figures are estimates from industry reports."),
     ("BSE — Bombay Stock Exchange",
-     "Asia's oldest stock exchange, established in 1875. The Sensex (BSE Sensitive Index) — tracking 30 large-cap companies — is used as the primary market benchmark in this analysis, particularly for pre-1996 data when Nifty did not yet exist. BSE historical data is the most complete source for Indian market performance going back to the early 1990s."),
+     "Asia's oldest stock exchange, established in 1875. The Sensex (BSE Sensitive Index) — which usually tracks 30 large-cap companies — is used as the primary market benchmark in this analysis, particularly for pre-1996 data when Nifty did not yet exist. BSE historical data is the most complete source for Indian market performance going back to the early 1990s."),
     ("NSE — National Stock Exchange",
      "Established in 1992 and operational from 1994, NSE introduced electronic trading to India. The Nifty 50 index tracks the top 50 companies by market capitalisation. Used in this analysis from 1999 onwards where available. NSE is also the primary source for FII/DII daily flow data through its publicly accessible historical datasets."),
     ("Securities",
-     "Financial instruments that represent ownership (equity/shares), debt (bonds), or the right to buy/sell assets (derivatives). In this analysis, 'securities' refers primarily to listed equities — shares traded on BSE and NSE. When FII or DII 'flows' are discussed, it means net buying or selling of these listed securities on Indian exchanges."),
+     "Financial instruments that represent ownership (equity/shares), debt (bonds), or the right to buy/sell assets (derivatives). In this analysis, 'securities' refers primarily to listed equities — shares traded on BSE and NSE. When FII or DII 'flows' are discussed, it means net buying or selling of these listed securities on Indian exchanges, in layman terms its like receipts of stocks that proves you own them."),
     ("SIP — Systematic Investment Plan",
      "A method of investing fixed amounts into mutual funds at regular intervals — typically monthly. The SIP revolution post-2014 created a predictable river of domestic capital flowing into markets every month. By 2025, SIP monthly inflows exceed ₹25,000 crore — money that flows in regardless of whether markets are up or down."),
     ("AUM — Assets Under Management",
-     "The total market value of assets managed by a fund or institution. India's mutual fund AUM growing from ₹0.91 lakh crore in 2000 to ₹73.73 lakh crore in 2025 — an 81x increase — is the single most important number in understanding why DII became dominant. More AUM means more firepower to deploy during market stress."),
+     "The total market value of assets managed by a fund or institution. India's mutual fund AUM growing from ₹0.91 lakh crore in 2000 to ₹73.73 lakh crore in 2025 , an 81x increase, is the single most important number in understanding why DII became dominant. More AUM means more firepower to pump during market stress."),
     ("EPFO — Employees' Provident Fund Organisation",
      "India's largest retirement savings institution managing provident fund contributions of salaried employees. Post-2015, EPFO was permitted to invest up to 15% of incremental corpus in equity ETFs — channelling retirement savings of crores of workers into the stock market. This added a massive, ultra-long-term, non-panic capital pool to DII."),
     ("LIC — Life Insurance Corporation",
-     "India's largest institutional investor and insurer. LIC deploys insurance premium collections into equity markets — its equity AUM growing from ₹0.11 lakh crore to ₹15.11 lakh crore over this period. During crisis years, LIC has historically been a counter-cyclical buyer — purchasing when others sell, stabilizing markets."),
+     "India's largest institutional investor and insurer. LIC deploys their insurance premium collections into equity markets — its equity AUM grew from ₹0.11 lakh crore to ₹15.11 lakh crore over this period. During crisis years, LIC has historically been a counter-cyclical buyer, the initial stabilizer — purchasing when others sell, stabilizing markets."),
     ("Taper Tantrum",
-     "In 2013, US Federal Reserve Chairman Ben Bernanke signalled the Fed would begin tapering its bond-buying programme (quantitative easing). Emerging markets including India saw massive FII outflows as investors feared rising US interest rates would pull capital back to the US. The rupee fell sharply. This event exposed India's vulnerability to FII dependency — a vulnerability that DII growth would eventually neutralize."),
+     "In 2013, US Federal Reserve Chairman Ben Bernanke signalled the Fed would begin tapering its bond-buying programme (quantitative easing). Emerging markets including India saw massive FII outflows as investors feared rising US interest rates would pull capital back to the US. The rupee fell sharply. This event exposed India's vulnerability to FII dependency, a vulnerability that DII growth would eventually neutralize, and in some way this was the event that influenced the measures to be taken to counter FII dependency"),
     ("Net Flow",
-     "The difference between total buying and total selling by a category of investor in a given period. A positive net flow means the category was a net buyer — more money entered markets than left. A negative net flow means net selling. This is more meaningful than gross flows because it shows the actual direction of capital movement and its market impact."),
+     "The difference between total buying and total selling by a category of investor in a given period. A positive net flow means the category was a net buyer — more money entered markets than left. A negative net flow means net selling. This is more meaningful than gross flows because it shows the actual direction of capital movement and its market impact, and thats what we used in our project, not the gross certian value but the +/- flow in FY, which perfectly works to capture and map the purpose of the project."),
 ]
 
 col_a, col_b = st.columns(2)
@@ -659,16 +659,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 limitations = [
-    ("No Standardised DII Tracking in the 1990s",
-     "The formal DII category as recognised by SEBI did not exist in its current form during FY 1992-93 to FY 1998-99. Domestic institutional investment in this period was fragmented across retail equity participants, UTI (Unit Trust of India), and early insurance deployments — none of which were aggregated under a single reporting framework. This analysis uses Retail Equity Investment (REI) figures as a proxy for early DII flows. These numbers should be treated as directional estimates, not precise institutional flow data."),
+    ("No Standardised DII Tracking in the 90s",
+     "The formal DII category, as recognised by SEBI, did not exist in its current form during FY 1992-93 to FY 1998-99. DIIs in this period were fragmented across retail equity participants, UTI (Unit Trust of India), and early insurance deployments — none of which were aggregated under a single reporting framework. This analysis uses Retail Equity Investment (REI) figures as a proxy for early DII flows. These numbers should be treated as directional estimates, not precise institutional flow data."),
     ("DII Composition Data Gap: 2000–2010",
-     "File 3 (DII Composition) tracks Mutual Fund AUM, retail folios, and LIC equity from 2005 onwards. Insurance AUM beyond LIC and EPFO equity deployment data is excluded for the pre-2015 period — EPFO was not permitted to invest in equities until FY 2015-16, and private insurance equity AUM was not consistently reported before 2010. The DII composition picture for 2000–2010 is therefore incomplete and understates total domestic institutional capital."),
+     "(DII Composition) File; tracks Mutual Fund AUM, retail folios, and LIC equity from 2005 onwards. Insurance AUM beyond LIC and EPFO equity deployment data is excluded for the pre-2015 period — EPFO was not permitted to invest in equities until FY 2015-16, and private insurance equity AUM was not consistently reported before 2010. The DII composition picture for 2000–2010 is therefore incomplete and understates total domestic institutional capital."),
     ("Market Benchmark: BSE Sensex Only (Pre-1996)",
      "Nifty 50 (NSE) was launched in April 1996. For FY 1992-93, 1993-94, and 1994-95, only BSE Sensex closing values are available and used. The Sensex tracks 30 large-cap stocks versus Nifty's 50 — this means pre-1996 market movement figures may not fully represent the broader market, particularly mid-cap volatility during the Harshad Mehta era."),
     ("Checkpoint Data, Not Continuous",
      "This analysis uses annual checkpoint data at selected fiscal years — not monthly or daily flows. Intra-year volatility, seasonal FII patterns, and short-term DII responses to specific events within a fiscal year are not captured. A monthly dataset would reveal more granular dynamics, particularly during 2020 where the COVID crash (March 2020) and recovery (April–December 2020) both fall within the same fiscal year."),
-    ("File 2 Covers Only 5 Crisis Events",
-     "The volatility events dataset is limited to five defining moments selected for their historical significance. Other significant market events — the 1997 Asian Financial Crisis, the 2001 dot-com bust, the 2016 demonetisation shock, and the 2018 IL&FS crisis — are not individually captured in crisis-level detail. Their effects are partially visible in the annual flow data but not analysed in isolation."),
 ]
 
 lim_a, lim_b = st.columns([1, 1])
@@ -686,7 +684,7 @@ st.markdown("""
     <strong style="color:#C4933F">Note on data integrity:</strong> Where exact figures were unavailable for early fiscal years,
     the closest reliable published figure from SEBI, BSE, RBI, or AMFI archives was used.
     All approximations are noted in the data sources. The core thesis — the structural shift from FII dependence
-    to DII dominance — is supported by the data across all checkpoint years regardless of these limitations.
+    to DII dominance — is supported by the data across all checkpoint years regardless of the limitations.
 </div>
 """, unsafe_allow_html=True)
 
@@ -695,7 +693,7 @@ st.markdown('<hr class="divider">', unsafe_allow_html=True)
 st.markdown("""
 <div style="text-align:center; padding: 20px 0 40px 0;">
     <div style="font-family:'Inter',sans-serif; font-size:11px; color:#3E3E4E; letter-spacing:0.15em; text-transform:uppercase;">
-        Data Sources: SEBI · NSE · BSE · AMFI · RBI · Ministry of Finance
+        Data Sources: SEBI  NSE  BSE_Archives  AMFI  RBI  Ministry of Finance BloomBerg Morgan Stanley 
     </div>
     <div style="font-family:'Inter',sans-serif; font-size:11px; color:#3E3E4E; margin-top:8px;">
         All figures in ₹ Crore unless stated · Fiscal year basis (April–March) · Analysis period FY 1992-93 to FY 2024-25
