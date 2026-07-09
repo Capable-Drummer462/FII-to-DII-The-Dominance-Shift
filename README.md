@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-# FII to DII: The Dominance Shift
-### India Capital Markets Analysis — FY 1992-93 to FY 2024-25
 
-> *How three decades of foreign capital dependence gave way to domestic financial muscle — and why Indian markets no longer panic when foreign investors leave.*
+# FII to DII: The Dominance Shift
+### India Capital Markets Analysis — FY 1992-93 to FY 2025-26
+
+> *How three decades of foreign capital dependence gave way to domestic muscle — and why Indian markets no longer panic when foreign investors leave.*
 
 ---
 
@@ -10,7 +10,7 @@
 
 India's equity markets have undergone a structural shift from FII dependence to DII dominance. This project tracks that shift across five defining crisis events — from the Harshad Mehta Scam of 1992, where domestic institutions barely existed, to the Russia-Ukraine selloff of 2022, where DII absorbed 6.8x more than FII sold without the market flinching.
 
-**The core finding:** By FY 2024-25, DII deployed ₹8,49,000 crore against FII's -₹2,26,000 crore outflow. This is not a cyclical fluctuation. It is a structural, irreversible shift in who owns and anchors Indian markets.
+**The core finding:** By FY 2025-26, DII deployed ₹8,49,000 crore against FII's ₹2,26,000 crore outflow. This is not a cyclical fluctuation. It is a structural, irreversible shift in who owns and anchors Indian markets.
 
 ---
 
@@ -36,11 +36,11 @@ FII_to_DII_The_Dominance_Shift/
 
 | File | Rows | Description |
 |------|------|-------------|
-| `market_flows.csv` | 19 | Annual FII/DII net flows with Nifty & Sensex close — FY 1992-93 to FY 2024-25 |
+| `market_flows.csv` | 19 | Annual FII/DII net flows with Nifty & Sensex close — FY 1992-93 to FY 2025-26 |
 | `volatility_events.csv` | 5 | Five crisis events: market drop %, recovery months, FII/DII behaviour |
 | `dii_composition.csv` | 6 | MF AUM, retail investor folios, LIC equity at 5-year checkpoints |
 
-**Note:** All data on Indian fiscal year basis (April–March). Year notation follows the start year of the fiscal — FY 1992-93 is recorded as 1992.
+**Note:** All data on Indian fiscal year basis (April–March). Year notation follows the start year of the fiscal, FY 1992-93 is recorded as 1992.
 
 **Data Sources:**
 - FII/DII flows: SEBI, NSE Historical Data, NSDL
@@ -73,7 +73,7 @@ FII_to_DII_The_Dominance_Shift/
 | Retail investor folios growth | 27x — 101 lakh to 2,739 lakh |
 | LIC equity growth | 137x — ₹0.11L Cr to ₹15.11L Cr |
 | FY 2024-25 DII net flow | ₹8,49,000 Crore (all-time high) |
-| FY 2024-25 FII net flow | -₹2,26,000 Crore (net outflow) |
+| FY 2024-25 FII net flow | ₹2,26,000 Crore (net outflow) |
 | DII/FII ratio FY 2024-25 | DII deployed 3.76x more than FII pulled out |
 
 **The turning point:** 2019-20 (COVID) — first crisis where DII response was structurally larger than FII selling at scale. Confirmed and amplified in 2022.
@@ -131,8 +131,7 @@ This is not a trading strategy, a stock recommendation, or a prediction model. I
 
 ---
 
-*[Your Name] | Data Analysis Project | Python · pandas · Streamlit*
-*Data collected and verified: 2025 | Fiscal year basis throughout*
+*Gopal Vashistha | Data Analysis Project | Python  pandas Streamlit Matplotlib Plotly*
+ *| Fiscal year basis throughout*
 =======
 # FII-to-DII-The-Dominance-Shift
->>>>>>> a3929df656616b1eb0e126be35468a766ec48be4
